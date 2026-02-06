@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body class="page-auth">
+    <div class="auth-shell">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="pill">Student Registration</span>
+                <h1><span class="emoji-badge">🎓</span> Create your account</h1>
+                <p>Request access to book appointments with lecturers.</p>
+            </div>
+
+            <form class="form-grid" id="registerForm">
+                <label>
+                    Full name
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" id="email" name="email" placeholder="name@campus.edu" required>
+                </label>
+                <label>
+                    Department
+                    <input type="text" id="department" name="department" placeholder="Computer Science" required>
+                </label>
+                <label>
+                    Year/Level
+                    <input type="text" id="year" name="year" placeholder="3rd Year" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </label>
+                <button class="btn primary" type="submit">Submit Registration</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already registered? <a href="index.html">Back to login</a></p>
+                <p class="note">Admin approval is required before you can book appointments.</p>
+            </div>
+        </div>
+        <div class="auth-panel">
+            <h2><span class="emoji-badge">📚</span> Stay connected</h2>
+            <p>Share appointment purpose and timing directly with lecturers, and get notified after approvals.</p>
+            <div class="auth-emojis">
+                <span>✅ Fast approvals</span>
+                <span>🗓️ Smarter scheduling</span>
+                <span>💬 Clear updates</span>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/main-auth.js"></script>
+</body>
+</html>

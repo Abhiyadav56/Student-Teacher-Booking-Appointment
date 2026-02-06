@@ -1,0 +1,169 @@
+.page-auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+    position: relative;
+    overflow: hidden;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(249, 115, 22, 0.18), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(45, 212, 191, 0.2), transparent 40%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='600' viewBox='0 0 900 600'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232dd4bf' stop-opacity='0.25'/%3E%3Cstop offset='1' stop-color='%23f97316' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2'%3E%3Cpath d='M40 100 C 200 40, 280 160, 420 90'/%3E%3Cpath d='M120 280 C 280 210, 380 330, 520 260'/%3E%3Cpath d='M280 420 C 420 360, 520 480, 700 400'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='760' cy='120' r='70'/%3E%3Ccircle cx='140' cy='480' r='90'/%3E%3Ccircle cx='560' cy='520' r='60'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+}
+
+.page-auth::before,
+.page-auth::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.page-auth::before {
+    top: -40px;
+    left: -40px;
+}
+
+.page-auth::after {
+    bottom: -60px;
+    right: -20px;
+}
+
+.auth-shell {
+    width: min(980px, 100%);
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.auth-card {
+    background: var(--card);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(6px);
+}
+
+.auth-header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 12px 0 8px;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-header p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.pill {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(45, 212, 191, 0.15);
+    color: var(--brand-dark);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+}
+
+.form-grid {
+    margin-top: 20px;
+    display: grid;
+    gap: 14px;
+}
+
+.auth-footer {
+    margin-top: 18px;
+    display: grid;
+    gap: 8px;
+    font-size: 0.92rem;
+}
+
+.hint {
+    display: grid;
+    gap: 4px;
+    background: rgba(15, 118, 110, 0.08);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 118, 110, 0.15);
+}
+
+.auth-panel {
+    padding: 28px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.88), rgba(15, 118, 110, 0.35));
+    color: white;
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.auth-panel h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0 0 12px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-panel p {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.6;
+}
+
+.feature-list {
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+}
+
+.feature-list li {
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.emoji-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 14px;
+    background: rgba(45, 212, 191, 0.15);
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    font-size: 1.15rem;
+}
+
+.auth-emojis {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.auth-emojis span {
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    font-size: 1.05rem;
+}

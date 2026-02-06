@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Appointment System</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body class="page-auth">
+    <div class="auth-shell">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="pill">Appointment Hub</span>
+                <h1>Login</h1>
+                <p>Access your appointments from any device with a secure sign in.</p>
+            </div>
+
+            <form class="form-grid" id="loginForm">
+                <label>
+                    Role
+                    <select id="role" name="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="student">Student</option>
+                    </select>
+                </label>
+                <label>
+                    Email
+                    <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </label>
+                <button class="btn primary" type="submit">Login</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>New student? <a href="register.html">Register here</a></p>
+                <div class="hint">
+                    <strong>Demo accounts</strong>
+                    <span>Admin: admin123@gmail.com / admin123</span>
+                    <span>Teacher: teacher123@gmail.com / teach123</span>
+                    <span>Student: student1234@gmail.com / stu123</span>
+                </div>
+            </div>
+        </div>
+        <div class="auth-panel">
+            <h2>Always on time</h2>
+            <p>Students and lecturers can schedule, approve, or message each other anywhere with an internet connection.</p>
+            <ul class="feature-list">
+                <li>Approve and manage registrations</li>
+                <li>Search teachers by department or subject</li>
+                <li>Track appointment requests in real time</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="js/main-auth.js"></script>
+</body>
+</html>
