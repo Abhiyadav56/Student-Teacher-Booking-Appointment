@@ -82,7 +82,7 @@ class AppointmentApp {
         if (role === 'admin') {
             if (email === 'admin123@gmail.com' && password === 'admin123') {
                 this.setCurrentUser({ role: 'admin', name: 'Abhishek Yadav', email });
-                window.location.href = 'Dashboard.html';
+                window.location.href = 'dashboard.html';
                 return;
             }
         }
@@ -91,7 +91,7 @@ class AppointmentApp {
             const teacher = this.data.teachers.find(t => t.email === email && t.password === password);
             if (teacher) {
                 this.setCurrentUser({ role: 'teacher', id: teacher.id, name: teacher.name, email: teacher.email });
-                window.location.href = 'Dashboard.html';
+                window.location.href = 'dashboard.html';
                 return;
             }
         }
@@ -100,7 +100,7 @@ class AppointmentApp {
             const student = this.data.students.find(s => s.email === email && s.password === password);
             if (student && student.approved) {
                 this.setCurrentUser({ role: 'student', id: student.id, name: student.name, email: student.email });
-                window.location.href = 'Dashboard.html';
+                window.location.href = 'dashboard.html';
                 return;
             }
             if (student && !student.approved) {
